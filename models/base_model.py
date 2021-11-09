@@ -7,7 +7,7 @@ from datetime import datetime
 
 class BaseModel:
     """ Class BaseModel declaration
-        
+
     Attributes
     id; UUID, universal unique identifier
     created_at; time of creation(datetime)
