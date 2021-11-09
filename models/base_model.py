@@ -8,7 +8,7 @@ from datetime import datetime
 class BaseModel:
     """BaseModel that defines all common attributes/methods for other classes"""
 
-    def __init__(self, id, created_at, updated_at):
+    def __init__(self):
         """ Class BaseModel atributte constructor """
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
@@ -16,12 +16,11 @@ class BaseModel:
 
     def __str__(self):
         """ Str method to print """
-        print("[{}] ({}) <{}>".format(self.__class__.__name__, self.id, self.__dict__))
+        print("[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__))
 
     def save(self):
         """ Updates updated_at value """
-        if self.updated_at is not None:
-            self.updated_at = datetime.now()
+        self.updated_at = datetime.now()
 
     def to_dict(self):
         """ Return new_dict, and update created_at and updated_at values """
