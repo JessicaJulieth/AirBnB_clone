@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" base_Model program module"""
+""" base_Model Python module"""
 
 import uuid
 from datetime import datetime
@@ -19,7 +19,7 @@ class BaseModel:
     to_dict; method to dict
     """
 
-    # Constructor __init__
+    # __init__ Constructor
     def __init__(self, *args, **kwargs):
         """
         *args; argument string input
