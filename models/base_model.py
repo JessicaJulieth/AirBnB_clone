@@ -29,12 +29,12 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at":
-                    self.created_at = datetime.striptime
-                    (kwargs["created_at"], "%Y-%m-%dT%H:%M:%S.%f")
+                    self.created_at = datetime.strptime
+                    (kwargs[key], "%Y-%m-%dT%H:%M:%S.%f")
         
                 elif key == "updated_at":
-                    self.updated_at = datetime.striptime
-                    (kwargs["updated_at"], "%Y-%m-%dT%H:%M:%S.%f")
+                    self.updated_at = datetime.strptime
+                    (kwargs[key], "%Y-%m-%dT%H:%M:%S.%f")
 
                 elif key == "__class__":
                     continue
@@ -63,5 +63,5 @@ class BaseModel:
     # Magic methods
     def __str__(self):
         """ Str method to print """
-        print("[{}] ({}) {}".format
+        return("[{}] ({}) {}".format
         (self.__class__.__name__, self.id, self.__dict__))
