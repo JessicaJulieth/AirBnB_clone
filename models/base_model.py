@@ -31,7 +31,7 @@ class BaseModel:
                 if key == "updated_at" or key == "created_at":
                     x = datetime.strptime
                     (value, "%Y-%m-%dT%H:%M:%S.%f")
-                    setattr(self, key, x)
+                    setattr(self, key, value)
 
                 elif key != "__class__":
                     setattr(self, key, value)
