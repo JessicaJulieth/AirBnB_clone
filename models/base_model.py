@@ -28,19 +28,13 @@ class BaseModel:
 
         if kwargs:
             for key, value in kwargs.items():
-                if key == "updated_at":
-                    self.updated_at = datetime.strptime
-                    (kwargs[key], "%Y-%m-%dT%H:%M:%S.%f")
-                    
-                elif key == "created_at":
-                    self.created_at = datetime.strptime
-                    (kwargs[key], "%Y-%m-%dT%H:%M:%S.%f")
+                if key == "updated_at" or key == "created_at":
+                    x = datetime.strptime
+                    (value, "%Y-%m-%dT%H:%M:%S.%f")
+                    setattr(self, key, x)
 
-                elif key == "__class__":
-                    continue
-
-                else:
-                    self.__dict__[key] = value
+                elif key != "__class__":
+                    setattr(self, key, value)
 
         else:
             self.id = str(uuid.uuid4())
@@ -54,14 +48,15 @@ class BaseModel:
 
     def to_dict(self):
         """ Return new_dict, and update created_at and updated_at values """
-        new_dict = self.__dict__.copy()
-        new_dict["__class__"] = self.__class__.__name__
-        new_dict.get("created_at", self.created_at.isoformat())
-        new_dict.get("updated_at", self.updated_at.isoformat())
-        return new_dict
+        name = self.__class__.__name__
+        New_dict = self.__dict__.copy()
+        New_dict.update(__class__=name, created_at=self.created_at.isoformat())
+        New_dict.update(updated_at=self.updated_at.isoformat())
+
+        return New_dict
 
     # Magic methods
     def __str__(self):
         """ Str method to print """
         return("[{}] ({}) {}".format
-        (__class__.__name__, self.id, self.__dict__))
+        (self.__class__.__name__, self.id, self.__dict__))
