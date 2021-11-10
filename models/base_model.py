@@ -29,8 +29,8 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key == "updated_at" or key == "created_at":
-                    x = datetime.strptime
-                    (value, "%Y-%m-%dT%H:%M:%S.%f")
+                    kwargs[key] = datetime.strptime
+                    (key, "%Y-%m-%dT%H:%M:%S.%f")
                     setattr(self, key, value)
 
                 elif key != "__class__":
