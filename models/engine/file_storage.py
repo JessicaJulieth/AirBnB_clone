@@ -3,6 +3,7 @@
 and deserializes JSON file to instances"""
 
 import json
+from os import path
 from base_model import BaseModel
 
 class FileStorage:
@@ -36,3 +37,12 @@ class FileStorage:
 
     def save(self):
         """serializes __objects to the JSON file"""
+        for key in self.__objects:
+            with open(self.__file_path, "w") as file:
+                json.dumps(self.__objects, file)
+
+    def reload(self):
+        """deserializes the JSON file to __objects"""
+        if path.isfile(self.__file_path):
+            with open(self.__file_path, "w") as file:
+                self.__objects = json.load(self.__objects)
