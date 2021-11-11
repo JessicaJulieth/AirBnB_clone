@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ base_Model Python Package"""
 
+from models.__init__ import storage
 import uuid
 from datetime import datetime
 
@@ -31,7 +32,7 @@ class BaseModel:
                 if key == "updated_at" or key == "created_at":
                     kwargs[key] = datetime.strptime
                     (key, "%Y-%m-%dT%H:%M:%S.%f")
-                    setattr(self, key, value)
+                    storage.new()
 
                 elif key != "__class__":
                     setattr(self, key, value)
@@ -45,6 +46,7 @@ class BaseModel:
     def save(self):
         """ Updates updated_at value """
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """ Return new_dict, and update created_at and updated_at values """
