@@ -2,6 +2,7 @@
 """serializes instances to a JSON file 
 and deserializes JSON file to instances"""
 
+from models import base_model
 from models.base_model import BaseModel
 import json
 from os import path
@@ -52,6 +53,6 @@ class FileStorage:
             with open(self.__file_path, "r", encoding="utf-8") as file:
                 json_obj = json.load(file)
 
-            for key in json_obj:
-                created_key = json_obj[key]["__class__"]
-                self.__objects[key] = self.__objects[created_key](**json_obj[key])
+            for key, value in json_obj.items():
+                """created_key = json_obj[key]["__class__"]"""
+                self.__objects[key] = BaseModel(**value)
