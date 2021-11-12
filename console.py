@@ -16,7 +16,7 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, line):
         """End of file"""
         return True
-        
+ 
     def do_create(self, line):
         """Creates a new instance of BaseModel"""
         if line == len(1):
