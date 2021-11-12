@@ -50,8 +50,8 @@ class FileStorage:
         """deserializes the JSON file to __objects"""
         if path.isfile(self.__file_path):
             with open(self.__file_path, "r", encoding="utf-8") as file:
-                self.__objects = json.load(file)
+                json_obj = json.load(file)
 
-            for i in self.__objects:
-                clases = i[__class__]
-                self.__objects[clases] = i
+            for key in json_obj:
+                created_key = json_obj[key]["__class__"]
+                self.__objects[key] = self.__objects[created_key](**json_obj[key])
