@@ -5,6 +5,7 @@ from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand Class definition"""
     prompt = "(hbnb)"
@@ -16,7 +17,7 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, line):
         """End of file"""
         return True
- 
+
     def do_create(self, line):
         """Creates a new instance of BaseModel"""
         arguments = line.split()
@@ -31,6 +32,7 @@ class HBNBCommand(cmd.Cmd):
 
             else:
                 print("** class doesn't exist **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
