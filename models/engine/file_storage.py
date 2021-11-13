@@ -2,7 +2,6 @@
 """serializes instances to a JSON file 
 and deserializes JSON file to instances"""
 
-from models import base_model
 from models.base_model import BaseModel
 import json
 from os import path
