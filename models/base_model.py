@@ -48,18 +48,21 @@ class BaseModel:
         models.storage.save()
 
     def to_dict(self):
-        """ Return new_dict, and update created_at and updated_at values """
+        """ Return new_dict, and update created_at and updated_at values
         name = self.__class__.__name__
         New_dict = self.__dict__.copy()
         New_dict.update(__class__=name, created_at=self.created_at.isoformat())
         New_dict.update(updated_at=self.updated_at.isoformat())
+        
+        return New_dict"""
 
-        return New_dict
+        Newdict = self.__dict__.copy()
+        Newdict["__class__"] = self.__class__.__name__
+        Newdict["created_at"] = Newdict["created_at"].isoformat()
+        Newdict["updated_at"] = Newdict["updated_at"].isoformat()
+        return Newdict
 
     # Magic methods
     def __str__(self):
         """ Str method to print """
-        return(
-            "[{}] ({}) {}".format
-            (self.__class__.__name__, self.id, self.__dict__)
-            )
+        return("[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__))

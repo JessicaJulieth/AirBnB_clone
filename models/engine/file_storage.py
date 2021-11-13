@@ -42,7 +42,6 @@ class FileStorage:
 
         for key in self.__objects:
             New_dict[key] = self.__objects[key].to_dict()
-        print(self.__objects)
 
         with open(self.__file_path, "w") as file:
             json.dump(New_dict, file)
@@ -54,5 +53,4 @@ class FileStorage:
                 json_obj = json.load(file)
 
             for key, value in json_obj.items():
-                """created_key = json_obj[key]["__class__"]"""
                 self.__objects[key] = BaseModel(**value)

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Heredar de base model"""
-from models.base_model import BaseModells
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
