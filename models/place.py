@@ -2,6 +2,7 @@
 """ Heredar de base model"""
 from models.base_model import BaseModells
 
+
 class Place(BaseModel):
     city_id = ""
     user_id = ""
