@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ program that contains the entry point of the command interpreter"""
 
-from models import base_model
-from models.engine import file_storage
+from models.base_model import BaseModel
+from models.engine.file_storage import FileStorage
 import cmd
 
 class HBNBCommand(cmd.Cmd):
@@ -19,19 +19,18 @@ class HBNBCommand(cmd.Cmd):
  
     def do_create(self, line):
         """Creates a new instance of BaseModel"""
-        print(type(line))
-        """if line == len(1):
+        arguments = line.split()
+
+        if len(arguments) == 0:
             print("** class name missing **")
         else:
-            for key in base_model.BaseModel:
-                if line(2) == key:
-                    Base_instance = base_model.BaseModel()
-                    file_storage.save(Base_instance)
-                    print(id(Base_instance))
+            if arguments[0] == "BaseModel":
+                instance = BaseModel()
+                print(instance.id)
+                instance.save()
 
-                else:
-                    print("** class doesn't exist **")
-                    """
+            else:
+                print("** class doesn't exist **")
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
