@@ -13,10 +13,9 @@ from models.user import User
 from models.engine.file_storage import FileStorage
 
 
+classes = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City,
+           "Place": Place, "Review": Review, "State": State, "User": User}
 
-
-classes = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City, 
-"Place": Place, "Review": Review, "State": State, "User": User}
 
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand Class definition"""
