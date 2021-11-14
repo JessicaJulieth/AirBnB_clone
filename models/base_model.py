@@ -53,7 +53,7 @@ class BaseModel:
         New_dict = self.__dict__.copy()
         New_dict.update(__class__=name, created_at=self.created_at.isoformat())
         New_dict.update(updated_at=self.updated_at.isoformat())
-        
+
         return New_dict"""
 
         Newdict = self.__dict__.copy()
@@ -65,4 +65,5 @@ class BaseModel:
     # Magic methods
     def __str__(self):
         """ Str method to print """
-        return("[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__))
+        return("[{}] ({}) {}".
+               format(self.__class__.__name__, self.id, self.__dict__))
