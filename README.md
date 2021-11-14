@@ -69,8 +69,9 @@ pip install pycodestyle
 
 ## Console
 
+<p> Interprete de comandos que almacena y conserva objetos en JSON el cual tambien permite cambiar el tipo de almacenamiento sin actualizar el codigo </p>
 
-
+# Use
 
 interactive mode:
 ```
