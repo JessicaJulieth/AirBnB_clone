@@ -6,6 +6,5 @@ pytest_cache/
 cover/
 .pyc
 
-
 ### JSON ###
 file.json

@@ -20,7 +20,7 @@ class BaseModel:
     to_dict; method to dict
     """
 
-    # __init__ Constructor
+    """__init__ Constructor"""
     def __init__(self, *args, **kwargs):
         """
         *args; argument string input
@@ -41,28 +41,21 @@ class BaseModel:
             self.updated_at = datetime.now()
             models.storage.new(self)
 
-    # Methods
+    """Methods"""
     def save(self):
         """ Updates updated_at value """
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """ Return new_dict, and update created_at and updated_at values
-        name = self.__class__.__name__
-        New_dict = self.__dict__.copy()
-        New_dict.update(__class__=name, created_at=self.created_at.isoformat())
-        New_dict.update(updated_at=self.updated_at.isoformat())
-
-        return New_dict"""
-
+        """ Return new_dict, and update created_at and updated_at values"""
         Newdict = self.__dict__.copy()
         Newdict["__class__"] = self.__class__.__name__
         Newdict["created_at"] = Newdict["created_at"].isoformat()
         Newdict["updated_at"] = Newdict["updated_at"].isoformat()
         return Newdict
 
-    # Magic methods
+    """Magic methods"""
     def __str__(self):
         """ Str method to print """
         return("[{}] ({}) {}".
