@@ -1,4 +1,4 @@
-#  First project 0x00. AirBnB clone - The console
+#  First project 0x00. AirBnB clone - The console 👾
 
  | ![Alt text](https://static.dw.com/image/56218728_303.jpg "Title") |
  | ----------------------------------------------------------------- |
@@ -6,7 +6,7 @@
 
 In this project we are going to clone a web application step by step of AirBnB, we will use tools built by ourselves throughout the project such as HTML / CSS templates, database storage, API, front-end integration which will also serve us for later projects.
 
-## Content
+## Content ✍️
 Each part of the project is intertwined and will help us to:
 * Put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances
 * Create a simple flow of serialization/deserialization:   Instance <-> Dictionary <-> JSON string <-> file
@@ -15,7 +15,7 @@ Each part of the project is intertwined and will help us to:
 * Create all unittests to validate all our classes and storage engine
 
 
-## Instructions
+## Instructions 🦾
 The first thing we must do is create our own shell limited to a specific use case, in this case we want to be able to manage the objects of our project and we will do it as follows:
 1. Create a new object (ex: a new User or a new Place)
 2. Retrieve an object from a file, a database etc…
@@ -59,7 +59,7 @@ pip install pycodestyle
 
 
 
-<h3> Files <h3>
+<h3> Files <h3> 👩‍💻
 
 | FILES | DESCRIPCION1 |
 | ----- | ------------ |
@@ -72,8 +72,8 @@ pip install pycodestyle
 
 
 
-## Authors 
+## Authors 👩‍💻
 
-Christian Felipe Martinez 2388@holbertonschool.com
-Jessica Julieth Sanabria 3497@holbertonschool.com
+<p1>Christian Felipe Martinez 2388@holbertonschool.com
+Jessica Julieth Sanabria 3497@holbertonschool.com<p1/>
 
