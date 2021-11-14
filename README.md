@@ -1,6 +1,5 @@
 #  First project 0x00. AirBnB clone - The console
 
- |                                                                   |
  | ![Alt text](https://static.dw.com/image/56218728_303.jpg "Title") |
  | ----------------------------------------------------------------- |
 
