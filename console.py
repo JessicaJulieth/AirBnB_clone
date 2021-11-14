@@ -28,12 +28,12 @@ class HBNBCommand(cmd.Cmd):
         """End of file"""
         return True
 
-    def do_empty(self):
+    def do_ENTER(self):
         """Jump to the next line when hit enter"""
         pass
 
     def do_create(self, line):
-        """Creates a new instance of BaseModel, saves it 
+        """Creates a new instance of BaseModel, saves it
         (to the JSON file) and prints the id"""
         arguments = line.split()
 
@@ -48,25 +48,31 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
 
     def do_show(self, line):
-        """Prints the string representation of an instance 
-        based on the class name and id. 
+        """Prints the string representation of an instance
+        based on the class name and id.
         Ex: $ show BaseModel 1234-1234-1234"""
         arguments = line.split()
 
-        if len(arguments) == 0: #len starts counting in 1
+        if len(arguments) == 0:  # len starts counting in 1
             print("** class name missing **")
-    
-        else:
+
+        """else:
             try:
                 if arguments[0] in classes: #start in 0
-                    if len(arguments) >= 2:
-                        print("coge id")
+                    pass
+                    if len(arguments) >= 1:
+                        a = FileStorage.all()
+                        print(type(a))
+
+                        if arguments[2] in a: # might need for to print its pos
+                                print(arguments[2]).__str__)
+                        elif arguments[2] == id(i):
                     else:
-                        print("**no coge id")
+                        print("** instance id missing **")
                 else:
                     print("** class doesn't exist **")
             except:
-                pass
+                pass"""
 
 
 if __name__ == '__main__':
