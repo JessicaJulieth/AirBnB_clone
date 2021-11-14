@@ -1,0 +1,7 @@
+# Created by Christian Martinez and Jessica Sanabria
+
+### Python ###
+__pycache__/
+
+### JSON ###
+file.json
