@@ -122,18 +122,18 @@ $
 | ----- | ------------ |
 | models |   |
 | engine |   |
-| tests |   |
-| AUTHORS |   |
-| README.md |   |
+| tests | Tests cases to the all proyect with unit tests |
+| AUTHORS | Listing all individuals having contributed content to the repository  |
+| README.md | Description of the project |
 
 ## FILES 📚
 
 | FILES | DESCRIPTION |
 | ----- | ------------ |
-| base_model.py |   |
-| __init__.py |   |
-| file_storage.py |   |
-| console.py |   |
+| base_model.py | Defines all common attributes/methods |
+| __init__.py | Python packages |
+| file_storage.py | Dictionary representation to a file  |
+| console.py | Have a commands interpreter  |
 | user.py |   |
 | state.py |   |
 | city.py |   |
@@ -146,14 +146,10 @@ $
 
 | COMMANDS | DESCRIPTION |
 | ----- | ------------ |
-|  |   |
-|  |   |
-|  |   |
-|  |   |
-|  |   |
-|  |   |
-
-
+| quit | Exit the program  |
+| EOF | Exit the program  |
+| help | Description to function  |
+| ENTER | Shouldn’t execute anything  |
 
 ## Authors 👩‍💻
 
