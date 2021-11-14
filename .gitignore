@@ -2,6 +2,10 @@
 
 ### Python ###
 __pycache__/
+pytest_cache/
+cover/
 
 ### JSON ###
 file.json
+
+.pyc
