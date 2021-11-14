@@ -14,7 +14,6 @@ Each part of the project is intertwined and will help us to:
 * Create the first abstracted storage engine of the project: File storage.
 * Create all unittests to validate all our classes and storage engine
 
-
 ## Instructions 🦾
 The first thing we must do is create our own shell limited to a specific use case, in this case we want to be able to manage the objects of our project and we will do it as follows:
 1. Create a new object (ex: a new User or a new Place)
@@ -54,28 +53,25 @@ git clone https://github.com/ChristianMartinezTech/AirBnB_clone.git
 pip install pycodestyle
 ```
 
-## Console
+## Commands 📝
 
+| COMMANDS | DESCRIPTION |
+| ----- | ------------ |
+| quit | Exit the program  |
+| EOF | Exit the program  |
+| help | Description to function  |
+| ENTER | Shouldn’t execute anything  |
+| create | Creates a new instance |
+| show | Prints the string representation of an instance |
+| destroy | Deletes an instance based |
+| all |  Prints all string representation of all instances based |
+| update | Updates an instance based  |
 
-## Examples
+## Console 🖥️
 
-```
-guillaume@ubuntu:~/AirBnB$ ./console.py
-(hbnb) help
+<p> Command interpreter that stores and preserves objects in JSON which also allows changing the storage type without updating the code. </p>
 
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb) 
-(hbnb) help quit
-Quit command to exit the program
-
-(hbnb) 
-(hbnb) 
-(hbnb) quit 
-guillaume@ubuntu:~/AirBnB$ 
-```
+### Use 🛠️ :
 
 interactive mode:
 ```
@@ -115,44 +111,55 @@ EOF  help  quit
 $
 ```
 
+## Examples 📌
 
-## FOLDERS 📂 
+```
+<jessie@DESKTOP-CF36KV6 AirBnB_clone>$ ./console.py 
+```
+
+```
+(hbnb) create BaseModel
+2dd6ef5c-467c-4f82-9521-a772ea7d84e9
+```
+
+```
+(hbnb) all MyModel
+** class doesn't exist **
+```
+
+```
+(hbnb) all BaseModel
+["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
+(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
+[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
+```
+
+## Folders 📂 
 
 | FOLDERS | DESCRIPTION |
 | ----- | ------------ |
-| models |   |
-| engine |   |
+| models | Has classes that are modeled from basemodel |
+| engine | Has json files |
 | tests | Tests cases to the all proyect with unit tests |
-| AUTHORS | Listing all individuals having contributed content to the repository  |
+| AUTHORS | Listing all individuals having contributed content to the repository |
 | README.md | Description of the project |
 
-## FILES 📚
+## Files 📚
 
 | FILES | DESCRIPTION |
 | ----- | ------------ |
 | base_model.py | Defines all common attributes/methods |
 | __init__.py | Python packages |
-| file_storage.py | Dictionary representation to a file  |
-| console.py | Have a commands interpreter  |
-| user.py |   |
-| state.py |   |
-| city.py |   |
-| amenity.py |   |
-| place.py |   |
-| review.py |   |
+| file_storage.py | Dictionary representation to a file |
+| console.py | Have a commands interpreter |
+| user.py | User class inherits from basemodel |
+| state.py | State class inherits from basemodel |
+| city.py | City class inherits from basemodel |
+| amenity.py | Amenity class inherits from basemodel |
+| place.py | Place class inherits from basemodel |
+| review.py | Review class inherits from basemodel |
 
-
-## COMMANDS 
-
-| COMMANDS | DESCRIPTION |
-| ----- | ------------ |
-| quit | Exit the program  |
-| EOF | Exit the program  |
-| help | Description to function  |
-| ENTER | Shouldn’t execute anything  |
-
-## Authors 👩‍💻
+## Authors 👨‍💻👩‍💻
 
 <p> Christian Felipe Martinez 2388@holbertonschool.com </p>
 <p> Jessica Julieth Sanabria 3497@holbertonschool.com </p>
-

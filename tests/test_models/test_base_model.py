@@ -28,8 +28,12 @@ class test_base_model(unittest.TestCase):
 
     def test_save(self):
         """Test if save is a method of BaseModel"""
-        self.assertTrue(hasattr(obj_Base, "save"), True)
+        self.assertTrue(hasattr(BaseModel, "save"), True)
 
     def test_to_dict(self):
         """Test if to_dict is a method of BaseModel"""
-        self.assertTrue(hasattr(obj_Base, "to_dict"), True)
+        self.assertTrue(hasattr(BaseModel, "to_dict"), True)
+
+    def test_to_str(self):
+        """Test if __str__ is a method of BaseModel"""
+        self.assertTrue(hasattr(BaseModel, "__str__"), True)

@@ -53,17 +53,20 @@ class HBNBCommand(cmd.Cmd):
         Ex: $ show BaseModel 1234-1234-1234"""
         arguments = line.split()
 
-        if len(arguments) == 0:
+        if len(arguments) == 0: #len starts counting in 1
             print("** class name missing **")
+    
         else:
-            if arguments[0] in classes:
-                if len(arguments) >= 1:
-                    print("Mas de uno")
+            try:
+                if arguments[0] in classes: #start in 0
+                    if len(arguments) >= 2:
+                        print("coge id")
+                    else:
+                        print("**no coge id")
                 else:
-                    print("** instance id missing **")
-            else:
-                print("** class doesn't exist **")
-
+                    print("** class doesn't exist **")
+            except:
+                pass
 
 
 if __name__ == '__main__':
