@@ -30,11 +30,12 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_empty(self, line):
-        """"""
+        """Jump to the next line when hit enter"""
         pass
 
     def do_create(self, line):
-        """Creates a new instance of BaseModel"""
+        """Creates a new instance of BaseModel, saves it 
+        (to the JSON file) and prints the id"""
         arguments = line.split()
 
         if len(arguments) == 0:
@@ -44,9 +45,26 @@ class HBNBCommand(cmd.Cmd):
                 instance = classes[arguments[0]]()
                 print(instance.id)
                 instance.save()
-
             else:
                 print("** class doesn't exist **")
+
+    def do_show(self, line):
+        """Prints the string representation of an instance 
+        based on the class name and id. 
+        Ex: $ show BaseModel 1234-1234-1234"""
+        arguments = line.split()
+
+        if len(arguments) == 0:
+            print("** class name missing **")
+        else:
+            if arguments[0] in classes:
+                if len(arguments) >= 1:
+                    print("Mas de uno")
+                else:
+                    print("** instance id missing **")
+            else:
+                print("** class doesn't exist **")
+
 
 
 if __name__ == '__main__':

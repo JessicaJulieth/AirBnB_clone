@@ -5,4 +5,4 @@ from models.base_model import BaseModel
 from models.user import User
 
 class test_user(unittest.TestCase):
-    
+    pass

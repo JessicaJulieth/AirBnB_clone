@@ -5,3 +5,4 @@ from models.base_model import BaseModel
 from models.place import Place
 
 class test_place(unittest.TestCase):
+    pass

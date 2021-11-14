@@ -5,3 +5,4 @@ from models.base_model import BaseModel
 from models.review import Review
 
 class test_review(unittest.TestCase):
+    pass
