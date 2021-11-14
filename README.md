@@ -53,7 +53,7 @@ git clone https://github.com/ChristianMartinezTech/AirBnB_clone.git
 pip install pycodestyle
 ```
 
-## COMMANDS 📝
+## Commands 📝
 
 | COMMANDS | DESCRIPTION |
 | ----- | ------------ |
@@ -134,7 +134,7 @@ $
 [BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
 ```
 
-## FOLDERS 📂 
+## Folders 📂 
 
 | FOLDERS | DESCRIPTION |
 | ----- | ------------ |
@@ -144,7 +144,7 @@ $
 | AUTHORS | Listing all individuals having contributed content to the repository |
 | README.md | Description of the project |
 
-## FILES 📚
+## Files 📚
 
 | FILES | DESCRIPTION |
 | ----- | ------------ |
