@@ -1,7 +1,7 @@
 #  First project 0x00. AirBnB clone - The console
-```
+
 ![Alt text](https://static.dw.com/image/56218728_303.jpg "Title")
-```
+
 
 In this project we are going to clone a web application step by step of AirBnB, we will use tools built by ourselves throughout the project such as HTML / CSS templates, database storage, API, front-end integration which will also serve us for later projects.
 
@@ -56,7 +56,7 @@ pip install pycodestyle
 
 ## Preview
 
-![Alt text](https://static.dw.com/image/56218728_303.jpg "Title")
+
 
 <h3> Files <h3>
 
