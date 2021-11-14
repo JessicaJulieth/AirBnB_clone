@@ -74,6 +74,6 @@ pip install pycodestyle
 
 ## Authors 👩‍💻
 
-<p1>Christian Felipe Martinez 2388@holbertonschool.com
-Jessica Julieth Sanabria 3497@holbertonschool.com<p1/>
+<p> Christian Felipe Martinez 2388@holbertonschool.com
+Jessica Julieth Sanabria 3497@holbertonschool.com </p>
 
