@@ -28,7 +28,7 @@ class HBNBCommand(cmd.Cmd):
         """End of file"""
         return True
 
-    def do_empty(self, line):
+    def do_empty(self):
         """Jump to the next line when hit enter"""
         pass
 
