@@ -159,7 +159,7 @@ $
 | place.py | Place class inherits from basemodel |
 | review.py | Review class inherits from basemodel |
 
-## Authors 👩‍💻
+## Authors 👨‍💻👩‍💻
 
 <p> Christian Felipe Martinez 2388@holbertonschool.com </p>
 <p> Jessica Julieth Sanabria 3497@holbertonschool.com </p>
