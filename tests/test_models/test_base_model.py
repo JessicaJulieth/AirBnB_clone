@@ -10,6 +10,10 @@ obj_Base = BaseModel()
 class test_base_model(unittest.TestCase):
     """Test the obj_Base object attributes"""
 
+    def test_obj_Base(self):
+        """Checks if obj_Base is a BaseModel instance"""
+        self.assertIsInstance(obj_Base, BaseModel)
+
     def test_id(self):
         """Test if id is an instance attribute of BaseModel"""
         self.assertTrue(hasattr(obj_Base, "id"), True)
