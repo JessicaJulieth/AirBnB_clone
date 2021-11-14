@@ -53,7 +53,7 @@ git clone https://github.com/ChristianMartinezTech/AirBnB_clone.git
 pip install pycodestyle
 ```
 
-## COMMANDS 
+## COMMANDS 📝
 
 | COMMANDS | DESCRIPTION |
 | ----- | ------------ |
@@ -67,11 +67,11 @@ pip install pycodestyle
 | all |  Prints all string representation of all instances based |
 | update | Updates an instance based  |
 
-## Console
+## Console 🖥️
 
-<p> Command interpreter that stores and preserves objects in JSON which also allows changing the storage type without updating the code </p>
+<p> Command interpreter that stores and preserves objects in JSON which also allows changing the storage type without updating the code. </p>
 
-## Use
+### Use 🛠️ :
 
 interactive mode:
 ```
@@ -111,7 +111,7 @@ EOF  help  quit
 $
 ```
 
-## Examples
+## Examples 📌
 
 ```
 <jessie@DESKTOP-CF36KV6 AirBnB_clone>$ ./console.py 
@@ -163,3 +163,5 @@ $
 
 <p> Christian Felipe Martinez 2388@holbertonschool.com </p>
 <p> Jessica Julieth Sanabria 3497@holbertonschool.com </p>
+
+ok
