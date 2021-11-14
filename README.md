@@ -100,12 +100,16 @@ $
 ## Examples
 
 ```
+<jessie@DESKTOP-CF36KV6 AirBnB_clone>$ ./console.py 
+```
+
+```
 (hbnb) create BaseModel
 2dd6ef5c-467c-4f82-9521-a772ea7d84e9
 ```
 
 ```
-all MyModel
+(hbnb) all MyModel
 ** class doesn't exist **
 ```
 
