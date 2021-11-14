@@ -57,25 +57,7 @@ pip install pycodestyle
 ## Console
 
 
-## Examples
 
-```
-guillaume@ubuntu:~/AirBnB$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb) 
-(hbnb) help quit
-Quit command to exit the program
-
-(hbnb) 
-(hbnb) 
-(hbnb) quit 
-guillaume@ubuntu:~/AirBnB$ 
-```
 
 interactive mode:
 ```
@@ -115,15 +97,35 @@ EOF  help  quit
 $
 ```
 
+## Examples
+
+```
+(hbnb) create BaseModel
+2dd6ef5c-467c-4f82-9521-a772ea7d84e9
+```
+
+```
+all MyModel
+** class doesn't exist **
+```
+
+```
+(hbnb) all BaseModel
+["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
+(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
+[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
+```
+
+
 
 ## FOLDERS 📂 
 
 | FOLDERS | DESCRIPTION |
 | ----- | ------------ |
-| models |   |
-| engine |   |
+| models | has classes that are modeled from basemodel |
+| engine | has json files |
 | tests | Tests cases to the all proyect with unit tests |
-| AUTHORS | Listing all individuals having contributed content to the repository  |
+| AUTHORS | Listing all individuals having contributed content to the repository |
 | README.md | Description of the project |
 
 ## FILES 📚
@@ -132,14 +134,14 @@ $
 | ----- | ------------ |
 | base_model.py | Defines all common attributes/methods |
 | __init__.py | Python packages |
-| file_storage.py | Dictionary representation to a file  |
-| console.py | Have a commands interpreter  |
-| user.py |   |
-| state.py |   |
-| city.py |   |
-| amenity.py |   |
-| place.py |   |
-| review.py |   |
+| file_storage.py | Dictionary representation to a file |
+| console.py | Have a commands interpreter |
+| user.py | User class inherits from basemodel |
+| state.py | State class inherits from basemodel |
+| city.py | City class inherits from basemodel |
+| amenity.py | Amenity class inherits from basemodel |
+| place.py | Place class inherits from basemodel |
+| review.py | Review class inherits from basemodel |
 
 
 ## COMMANDS 
@@ -150,6 +152,11 @@ $
 | EOF | Exit the program  |
 | help | Description to function  |
 | ENTER | Shouldn’t execute anything  |
+| create | Creates a new instance |
+| show | Prints the string representation of an instance |
+| destroy | Deletes an instance based |
+| all |  Prints all string representation of all instances based |
+| update | Updates an instance based  |
 
 ## Authors 👩‍💻
 
