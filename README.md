@@ -54,7 +54,9 @@ git clone https://github.com/ChristianMartinezTech/AirBnB_clone.git
 pip install pycodestyle
 ```
 
-<h3> FOLDERS 📂 <h3> 
+## Examples
+
+## FOLDERS 📂 
 
 | FOLDERS | DESCRIPTION |
 | ----- | ------------ |
@@ -64,7 +66,7 @@ pip install pycodestyle
 | AUTHORS |   |
 | README.md |   |
 
-<h3> FILES 📚<h3> 
+## FILES 📚
 
 | FILES | DESCRIPTION |
 | ----- | ------------ |
@@ -80,7 +82,7 @@ pip install pycodestyle
 | review.py |   |
 
 
-<h3> COMMANDS <h3> 
+## COMMANDS 
 
 | COMMANDS | DESCRIPTION |
 | ----- | ------------ |
@@ -90,8 +92,6 @@ pip install pycodestyle
 |  |   |
 |  |   |
 |  |   |
-
-
 
 
 
