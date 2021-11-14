@@ -3,5 +3,7 @@
 import unittest
 from models.base_model import BaseModel
 
+
 class test_file_storage(unittest.TestCase):
+    """Test class for FileStorage"""
     pass

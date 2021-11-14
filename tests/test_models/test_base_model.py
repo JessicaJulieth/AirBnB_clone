@@ -6,6 +6,7 @@ from models.base_model import BaseModel
 
 obj_Base = BaseModel()
 
+
 class test_base_model(unittest.TestCase):
     """Test the obj_Base object attributes"""
 
