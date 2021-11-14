@@ -22,11 +22,11 @@ class FileStorage:
     reload(self): deserializes the JSON file to __objects
     """
 
-    # Private class attributes:
+    """Private class attributes:"""
     __file_path = "file.json"
     __objects = {}
 
-    # Public instance methods:
+    """Public instance methods:"""
     def all(self):
         """returns the dictionary __objects"""
         return self.__objects
