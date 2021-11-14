@@ -53,6 +53,20 @@ git clone https://github.com/ChristianMartinezTech/AirBnB_clone.git
 pip install pycodestyle
 ```
 
+## COMMANDS 
+
+| COMMANDS | DESCRIPTION |
+| ----- | ------------ |
+| quit | Exit the program  |
+| EOF | Exit the program  |
+| help | Description to function  |
+| ENTER | Shouldn’t execute anything  |
+| create | Creates a new instance |
+| show | Prints the string representation of an instance |
+| destroy | Deletes an instance based |
+| all |  Prints all string representation of all instances based |
+| update | Updates an instance based  |
+
 ## Console
 
 
@@ -144,22 +158,7 @@ $
 | place.py | Place class inherits from basemodel |
 | review.py | Review class inherits from basemodel |
 
-## COMMANDS 
-
-| COMMANDS | DESCRIPTION |
-| ----- | ------------ |
-| quit | Exit the program  |
-| EOF | Exit the program  |
-| help | Description to function  |
-| ENTER | Shouldn’t execute anything  |
-| create | Creates a new instance |
-| show | Prints the string representation of an instance |
-| destroy | Deletes an instance based |
-| all |  Prints all string representation of all instances based |
-| update | Updates an instance based  |
-
 ## Authors 👩‍💻
 
 <p> Christian Felipe Martinez 2388@holbertonschool.com </p>
 <p> Jessica Julieth Sanabria 3497@holbertonschool.com </p>
-
