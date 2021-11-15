@@ -3,6 +3,12 @@
 and deserializes JSON file to instances"""
 
 from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
 import json
 from os import path
 
@@ -53,4 +59,4 @@ class FileStorage:
                 json_obj = json.load(file)
 
             for key, value in json_obj.items():
-                self.__objects[key] = BaseModel(**value)
+                self.__objects[key] = eval("{}(**value)".format(value["__class__"]))
