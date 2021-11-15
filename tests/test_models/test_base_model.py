@@ -27,10 +27,22 @@ class test_base_model(unittest.TestCase):
         self.assertTrue(hasattr(obj_Base, "updated_at"), True)
 
     def test_save(self):
-        """Test if save is a method of BaseModel"""
+        """Test if the date is updating"""
+        now = obj_Base.updated_at
+        obj_Base.save()
+        now2 = obj_Base.updated_at
+        self.assertNotEqual(now, now2)
+        
+    def test_save_2(self):
+        """Test if save is a method of BaseModel""" 
         self.assertTrue(hasattr(BaseModel, "save"), True)
 
     def test_to_dict(self):
+        """Test if to_dict is a dict"""
+        new_dict = obj_Base.to_dict()
+        self.assertIsInstance(new_dict, dict)
+        
+    def test_to_dict_2(self):
         """Test if to_dict is a method of BaseModel"""
         self.assertTrue(hasattr(BaseModel, "to_dict"), True)
 
