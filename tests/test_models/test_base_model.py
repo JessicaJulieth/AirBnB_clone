@@ -46,6 +46,11 @@ class test_base_model(unittest.TestCase):
         """Test if to_dict is a method of BaseModel"""
         self.assertTrue(hasattr(BaseModel, "to_dict"), True)
 
-    def test_to_str(self):
+    def test_to_str2(self):
         """Test if __str__ is a method of BaseModel"""
         self.assertTrue(hasattr(BaseModel, "__str__"), True)
+
+    def test_to_str(self):
+        """ Test if __str__ is a str"""
+        new_str = obj_Base.__str__()
+        self.assertIsInstance(new_str, str)
