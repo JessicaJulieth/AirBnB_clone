@@ -50,7 +50,7 @@ class test_base_model(unittest.TestCase):
         """Test if __str__ is a method of BaseModel"""
         self.assertTrue(hasattr(BaseModel, "__str__"), True)
 
-    def test__str__(self):
+    def test___str__(self):
         """ Test if __str__ is a str"""
         new_str = obj_Base.__str__()
         self.assertIsInstance(new_str, str)
