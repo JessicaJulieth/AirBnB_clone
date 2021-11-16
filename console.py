@@ -33,7 +33,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     # Enter Command
-    def do_ENTER(self):
+    def emptyline(self):
         """Jump to the next line when hit enter"""
         pass
 
@@ -60,7 +60,7 @@ class HBNBCommand(cmd.Cmd):
         Ex: $ show BaseModel 1234-1234-1234"""
         arguments = line.split()
 
-        if len(arguments) == 0:  # len starts counting in 1
+        if len(arguments) == 0:  # len starts counting in 1  
             print("** class name missing **")
 
         else:
@@ -96,7 +96,8 @@ class HBNBCommand(cmd.Cmd):
 
                     for i in a.keys():
                         if i == kys:
-                            a.pop(i)
+                            del a[i]
+                            storage.save()
                             return
                     else:
                         print("** no instance found **")
@@ -113,18 +114,49 @@ class HBNBCommand(cmd.Cmd):
         a = storage.all()
         repr = []
 
-        """if len(arguments) == 0:  # len starts counting in 1
+        if len(arguments) == 0:  # len starts counting in 1
             for i in a.values():
                 repr.append(i.__str__())
-            print(repr)"""
+            print(repr)
 
-        if arguments[0] in classes: #Class exist
+        elif arguments[0] in classes: #Class exist
             for i in a.values():
                 if i.__class__.__name__ == arguments[0]:
                     repr.append(i.__str__())
             print(repr)
         else:
             print("** class doesn't exist **")
+
+    # Update Command
+    def do_update(self, line):
+        """Updates an instance based on the class name
+        and id by adding or updating attribute"""
+        arguments = line.split()
+
+        if len(arguments) == 0:  # len starts counting in 1
+            print("** class name missing **")
+            return False
+
+        else:
+            if arguments[0] in classes: #start in 0
+                if len(arguments) > 1:
+                    if len(arguments) > 2:
+                        a = storage.all()
+                        ki = arguments[0] + "." + arguments[1] # key + id
+                        if ki in a.keys():
+                            if len(arguments) > 3:
+                                setattr(a[ki], arguments[2], arguments[3])
+                                a[ki].save()
+                            else:
+                                print("** value missing **")
+                        else:
+                            print("** no instance found **")
+                    else:
+                        print("** attribute name missing **")
+                else:
+                    print("** instance id missing **")
+            else:
+                print("** class doesn't exist **")
 
 
 if __name__ == '__main__':
